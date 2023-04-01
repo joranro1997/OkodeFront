@@ -1,0 +1,11 @@
+<label for="search-box">Search:</label>
+<input type="text" placeholder="Search movies" [(ngModel)]="searchFilter" (keyup)="filterMovies()">
+
+
+<ul>
+    <li *ngFor="let movie of filteredMovies">
+      <a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a>
+    </li>
+  </ul>
+  
+  
